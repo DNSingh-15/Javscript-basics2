@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basic-JavaScript-2</title>
+</head>
+
+<body>
+    <h1>basic-JavaScript-2</h1>
+</body>
+<script>
+    // Question   -  related to human age and dog age concept
+    var humanAge = prompt("what is human age ");
+    var dogAge = ((humanAge - 21) / 4) + 2;
+    alert("human age is " + humanAge + " and dog age is " + dogAge);
+
+    console.log("human age is " + humanAge + " and dog age is " + dogAge);
+
+
+    // increment operator quiz
+    var x = 3;
+    var y = x++;             // x++ in this case value is to be same until we again put x value 
+    y += 1;
+    console.log(y);
+
+    var x = 3;
+    var y = x++;
+    y = x;
+    y += 1;
+    console.log(y);
+
+
+    // decrement operator
+    var x = 3;
+    var y = x--;
+    y -= 1;
+    console.log(y);
+
+    var x = 3;
+    var y = x--;
+    y = x;
+    y -= 1;
+    console.log(y);
+
+    var x = 3;
+    var y = --x;
+    y -= 1;
+    console.log(y);
+
+
+
+
+    // functions
+
+    // basic function template
+    function hello() {
+        console.log("Hello World");
+    }
+    hello()
+    // or
+    function Hello() {
+        return "hello world";
+    }
+    console.log();
+
+
+    //   money decided according to bottles
+    function Milkby_bottles(bottles) {
+        console.log(`buy  bottles  ${bottles} of milk  and the cost is  ${bottles * 20} Rs.`);
+    }
+    Milkby_bottles(10);
+
+    //  botles decided according to money
+    function Milkby_money(money) {
+        var numberofBottles = Math.floor(money / 3);
+        console.log(`In ${money}Rs. purchase ${numberofBottles} milk bottles`);
+    }
+    Milkby_money(10);
+
+    // defing the variables
+    //global
+    var Name = ""
+    var name = ""
+
+    //const 
+    const PI = ""
+    const DATA = ""
+
+    // private
+
+
+
+
+
+    // functions method in javasrcipt
+    // method = 1 --input is nothing but output is something
+    function func_Method1() {
+        return `Hello and welcome to the LifeSignals`;
+    }
+    console.log(func_Method1());
+
+
+    // method = 2 --input is something and output is also something
+    function func_Method2(salary) {
+        return `my job profile is software developer and the salary is ${salary}Rs.`;
+    }
+    console.log(func_Method2(8000000));
+
+    // method = 3 --input is something but output is nothing
+    function func_Method3(fName) {
+        alert(`My nick name is DN`);
+        prompt(`my address is-`);
+    }
+    console.log(func_Method3());
+
+
+
+
+
+    // Question - you have creat e a function that tells us how many years,month,weeks and days we have left if we live 90 years -------function name should be lifeInweeks.
+
+    function lifeInWeeks(age) {
+        var yearsRemaining = 90 - age;
+        var monthsReamaining = yearsRemaining * 12;
+        var weeksRemaining = yearsRemaining * 52;
+        var daysRemaining = yearsRemaining * 365;
+
+        console.log(`my remaining life is ${yearsRemaining} years, ${monthsReamaining} months, ${weeksRemaining} weeks and ${daysRemaining}days`);
+    }
+    lifeInWeeks(51)
+
+    // Question 2 - create a function that takes weight and height ....and it gives the calculated BMI value
+    // BMI formula = weight(kg)/(height*height) ...height should be in meter
+
+    function bmiCalculator(weight, height) {
+        // var bmi = weight / (height * height);
+        var bmi = weight / Math.pow(height, 2);
+        return bmi;
+    }
+    console.log(bmiCalculator(65, 1.8));
+
+
+
+
+
+    //    loops
+    // for loop
+
+    let i = 0;                     // i = index
+    for (i = 0; i < 3; i++) {
+        console.log(i);
+    }
+
+    // array
+    var arr = ["rohan", "drishti", "gazal", "shetty"];
+
+    // for loop
+    for (let index = 0; index < arr.length; index++) {
+        console.log(arr[index]);
+    }
+    //or
+    //  forEach loop                                
+    arr.forEach(function f(element) {
+        console.log("Hi " + element);
+    })
+    // or
+    //  for of loop                   
+    for (element of arr) {
+        console.log("hello " + element);
+    }
+
+    // for in loop   -   it is used mainly for the iteration of object
+    var employe = {
+        name: "rockey",
+        salary: 567,
+        role: "developer"
+    }
+    for (key in employe) {
+        // console.log(employe);
+        console.log(`the ${key} of employee is ${employe[key]}`);
+    }
+
+
+    // while loop
+    var p = 0;
+    while (p < 4) {
+        // console.log(p);
+        console.log(`${p} is less than 4`)
+        p++;
+    }
+
+    // do while loop
+    var j = 5;
+    do {
+        console.log(`${j} is < than 4`);
+        j++;
+    }
+    while (j < 6)
+
+</script>
+
+</html>
